@@ -1,0 +1,137 @@
+html,
+body {
+  margin: 0;
+  height: 100%;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  background-color: #111827;
+  color: #1f2937;
+}
+
+
+/* Main layout */
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* This centers the console on the page. */
+}
+
+
+/* Main console */
+
+.console {
+  width: 650px;
+
+  padding: 45px;
+
+  background-color: white;
+
+  border: 4px solid #334155;
+
+  text-align: center;
+}
+
+
+/* Small top label */
+
+.label {
+  margin-top: 0;
+
+  color: #64748b;
+
+  font-size: 14px;
+}
+
+
+/* Main title */
+
+#title {
+  margin-top: 20px;
+  margin-bottom: 30px;
+
+  font-size: 40px;
+
+  color: #0f172a;
+}
+
+
+/* Message display */
+
+.display {
+  padding: 30px;
+
+  background-color: #e2e8f0;
+
+  border: 2px solid #94a3b8;
+}
+
+
+#message {
+  margin: 0;
+
+  font-size: 22px;
+}
+
+
+/* Main buttons */
+
+.controls {
+  display: flex;
+  justify-content: center;
+  /* This places the main buttons in one centered row. */
+
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+
+button {
+  margin-left: 8px;
+  margin-right: 8px;
+
+  padding: 13px 20px;
+
+  background-color: #1e293b;
+  color: white;
+
+  border: 1px solid #1e293b;
+
+  font-size: 15px;
+}
+
+
+/* Reset button */
+
+.reset-area {
+  margin-bottom: 30px;
+
+  text-align: center;
+}
+/* This places the reset button below the main controls. */
+
+
+#resetButton {
+  background-color: #b91c1c;
+  color: white;
+
+  border: 1px solid #b91c1c;
+}
+/* This makes the reset button red. */
+
+
+/* Status area */
+
+#status {
+  margin-bottom: 0;
+
+  padding: 15px;
+
+  background-color: #f1f5f9;
+
+  border: 1px solid #94a3b8;
+
+  font-size: 16px;
+}
