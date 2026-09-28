@@ -2,59 +2,75 @@
 <html lang="en">
 
 <head>
+
   <meta charset="UTF-8">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- This is for making the page fit different screen sizes. -->
-
-  <title>Events in Motion</title>
+  <title>Launch Control</title>
 
   <link rel="stylesheet" href="css.css">
-  <!-- This is for connecting the CSS file. -->
+  <!-- This connects the CSS file. -->
+
 </head>
 
 
 <body id="page">
 
-  <main class="console" id="console">
-    <!-- This is the main interactive area. -->
 
-    <p class="label">CCT 360 INTERACTIVE SYSTEM</p>
-
-    <h1 id="title">SYSTEM STANDBY</h1>
-    <!-- This title can be changed with JavaScript. -->
+  <div class="console" id="console">
+    <!-- This is the main launch control panel. -->
 
 
-    <div class="display">
+    <p class="label">
+      CCT 360 LAUNCH CONTROL
+    </p>
+
+
+    <h1 id="title">
+      MISSION STANDBY
+    </h1>
+    <!-- This title changes during the launch process. -->
+
+
+    <div class="display" id="display">
+      <!-- This area shows the current mission message. -->
 
       <p id="message">
-        Waiting for user input.
+        Rocket systems are waiting for activation.
       </p>
-      <!-- This message can be changed with JavaScript. -->
 
     </div>
 
 
     <div class="controls">
-      <!-- These buttons control the main interface. -->
+      <!-- These are the three preparation controls. -->
 
-      <button id="activateButton">
-        ACTIVATE
+      <button id="powerButton">
+        POWER ON
       </button>
 
-      <button id="signalButton">
-        SIGNAL
+      <button id="engineButton">
+        START ENGINE
       </button>
 
       <button id="checkButton">
-        SYSTEM CHECK
+        LAUNCH CHECK
+      </button>
+
+    </div>
+
+
+    <div class="launch-area">
+      <!-- This is the final launch control. -->
+
+      <button id="launchButton">
+        LAUNCH
       </button>
 
     </div>
 
 
     <div class="reset-area">
-      <!-- This places the reset button below the other controls. -->
+      <!-- This places the reset button below the launch button. -->
 
       <button id="resetButton">
         RESET
@@ -66,13 +82,15 @@
     <p id="status">
       STATUS: READY
     </p>
-    <!-- This shows the current system status. -->
+    <!-- This shows the current rocket status. -->
 
-  </main>
+
+  </div>
 
 
   <script src="script.js"></script>
-  <!-- This is for connecting the JavaScript file. -->
+  <!-- This connects the JavaScript file. -->
+
 
 </body>
 

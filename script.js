@@ -1,61 +1,111 @@
-function activateSystem() {
+function powerOn() {
 
   document.getElementById("page").style.backgroundColor = "#2563eb";
 
-  document.getElementById("console").style.backgroundColor = "#fef3c7";
+  document.getElementById("console").style.backgroundColor = "#dbeafe";
 
-  document.getElementById("title").innerHTML = "SYSTEM ACTIVE";
+  document.getElementById("title").innerHTML = "SYSTEMS ONLINE";
 
-  document.getElementById("status").innerHTML = "STATUS: SYSTEM IS RUNNING";
+  document.getElementById("message").innerHTML =
+    "Power restored. Launch systems are online.";
 
-  // This changes the page into active mode.
+  document.getElementById("status").innerHTML =
+    "STATUS: POWER ONLINE";
+
+  // This turns on the launch system and changes the interface.
 }
 
 
-function receiveSignal() {
+function startEngine() {
 
-  document.getElementById("message").innerHTML = "Incoming signal received.";
+  document.getElementById("display").style.backgroundColor = "#fde68a";
 
-  document.getElementById("status").innerHTML = "STATUS: SIGNAL RECEIVED";
+  document.getElementById("message").innerHTML =
+    "Main engine started. Preparing for launch.";
 
-  // This changes the message and status.
+  document.getElementById("status").innerHTML =
+    "STATUS: ENGINE RUNNING";
+
+  // This starts the rocket engine and changes the mission status.
 }
 
 
-function systemCheck() {
+function launchCheck() {
 
-  alert("System check complete.");
+  alert("All systems ready for launch.");
 
-  document.getElementById("status").innerHTML = "STATUS: SYSTEM CHECK COMPLETE";
+  document.getElementById("title").innerHTML =
+    "READY FOR LAUNCH";
 
-  // This uses a browser alert and updates the status.
+  document.getElementById("display").style.backgroundColor = "#dcfce7";
+
+  document.getElementById("message").innerHTML =
+    "Launch check complete. Rocket is ready.";
+
+  document.getElementById("status").innerHTML =
+    "STATUS: READY FOR LAUNCH";
+
+  // This uses a browser alert and completes the launch check.
 }
 
 
-function resetSystem() {
+function launchRocket() {
 
-  document.getElementById("page").style.backgroundColor = "#111827";
+  document.getElementById("page").style.backgroundColor = "#ea580c";
 
-  document.getElementById("console").style.backgroundColor = "white";
+  document.getElementById("console").style.backgroundColor = "#ffedd5";
 
-  document.getElementById("title").innerHTML = "SYSTEM STANDBY";
+  document.getElementById("display").style.backgroundColor = "#fed7aa";
 
-  document.getElementById("message").innerHTML = "Waiting for user input.";
+  document.getElementById("title").innerHTML =
+    "LIFTOFF!";
 
-  document.getElementById("status").innerHTML = "STATUS: READY";
+  document.getElementById("message").innerHTML =
+    "Rocket launched successfully.";
 
-  // This returns the interface to its original state.
+  document.getElementById("status").innerHTML =
+    "STATUS: ROCKET LAUNCHED";
+
+  // This launches the rocket and changes the final mission status.
 }
 
 
-document.getElementById("activateButton").addEventListener("click", activateSystem);
-// This runs activateSystem when the button is clicked.
+function resetMission() {
 
-document.getElementById("signalButton").addEventListener("click", receiveSignal);
-// This runs receiveSignal when the button is clicked.
+  document.getElementById("page").style.backgroundColor = "#0b132b";
 
-document.getElementById("checkButton").addEventListener("click", systemCheck);
-// This runs systemCheck when the button is clicked.
+  document.getElementById("console").style.backgroundColor = "#f8fafc";
 
-document.getElementById("resetButton").addEventListener("click", resetSystem);
-// This runs resetSystem when the button is clicked.
+  document.getElementById("display").style.backgroundColor = "#e2e8f0";
+
+  document.getElementById("title").innerHTML =
+    "MISSION STANDBY";
+
+  document.getElementById("message").innerHTML =
+    "Rocket systems are waiting for activation.";
+
+  document.getElementById("status").innerHTML =
+    "STATUS: READY";
+
+  // This returns the launch control panel to its original state.
+}
+
+
+document.getElementById("powerButton").addEventListener("click", powerOn);
+// This runs powerOn when POWER ON is clicked.
+
+
+document.getElementById("engineButton").addEventListener("click", startEngine);
+// This runs startEngine when START ENGINE is clicked.
+
+
+document.getElementById("checkButton").addEventListener("click", launchCheck);
+// This runs launchCheck when LAUNCH CHECK is clicked.
+
+
+document.getElementById("launchButton").addEventListener("click", launchRocket);
+// This runs launchRocket when LAUNCH is clicked.
+
+
+document.getElementById("resetButton").addEventListener("click", resetMission);
+// This runs resetMission when RESET is clicked.
